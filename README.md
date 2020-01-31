@@ -1,7 +1,8 @@
 # Mini-Kurs-MoveSemantik
- Mini-Kurs zur Move-Semantik in C++ inkl. YouTube-Videos
 
 Dieses Tutorial ist Teil des Mini-Kurses „Move-Semantik in C++“ im YouTube-Kanal "The Fearless Engineer".  
+
+<img src="images/move-semantik-teaser.png" width="535" height="400" />
 
 ## Teaser
 
@@ -22,31 +23,31 @@ Die Kennung vor jedem Code-Beispiel (z.B. *MS-1-1-L1*) dient dazu, beim Kompilie
 
 ### Grundlagen
 * **Stack und Heap**
-		* MS1-1-L1 : Wachstumsrichtung des Stack-Speichers ermitteln
-		* MS1-1-L2 : Speicherbedarf von Funktionen auf dem Stack ermitteln
-		* MS1-1-L3 : Speicherbedarf von Heap-Variablen auf  Heap und Stack untersuchen 
-		* MS1-1-L4 : Laufzeitvergleich beim Zugriff auf Stack- und Heap-Speicher 
+	* MS1-1-L1 : Wachstumsrichtung des Stack-Speichers ermitteln
+	* MS1-1-L2 : Speicherbedarf von Funktionen auf dem Stack ermitteln
+	* MS1-1-L3 : Speicherbedarf von Heap-Variablen auf  Heap und Stack untersuchen 
+	* MS1-1-L4 : Laufzeitvergleich beim Zugriff auf Stack- und Heap-Speicher 
 * **Parameterübergabe**
-		* MS1-2-L5 : Ermittlung der Speicherbelegung von Funktionen für *CallByValue*
-		* MS1-2-L6 : Ermittlung der Speicherbelegung von Funktionen für *CallByReference*
-		* MS1-2-L7 : Analyse der Auswirkungen von `const` auf das Verhalten von *CallByReference* 
+	* MS1-2-L5 : Ermittlung der Speicherbelegung von Funktionen für *CallByValue*
+	* MS1-2-L6 : Ermittlung der Speicherbelegung von Funktionen für *CallByReference*
+	* MS1-2-L7 : Analyse der Auswirkungen von `const` auf das Verhalten von *CallByReference* 
 * **Copy-Semantik**
-		* MS1-3-L9 : Implementierung der *Rule of Three* in einer eigenen Klasse
-		* MS1-3-L11 : Durchführung einer *Shallow Copy* von Instanzen einer eigenen Klasse
-		* MS1-3-L12 : Umwandlung der Copy-Semantik von *Shallow Copy* zu *Deep Copy*
+	* MS1-3-L9 : Implementierung der *Rule of Three* in einer eigenen Klasse
+	* MS1-3-L11 : Durchführung einer *Shallow Copy* von Instanzen einer eigenen Klasse
+	* MS1-3-L12 : Umwandlung der Copy-Semantik von *Shallow Copy* zu *Deep Copy*
 * **Lvalues und Rvalues**
-		* MS1-3-L13 : Unterschiede zwischen *Lvalues* und *Rvalues* erkennen
-		* MS1-3-L14 : *Lvalue-Referenzen* als Alias-Identifier verwenden
-		* MS1-3-L15 : *Lvalue-Referenzen* als Parameter und Rückgabetyp in Funktionen verwenden
+	* MS1-3-L13 : Unterschiede zwischen *Lvalues* und *Rvalues* erkennen
+	* MS1-3-L14 : *Lvalue-Referenzen* als Alias-Identifier verwenden
+	* MS1-3-L15 : *Lvalue-Referenzen* als Parameter und Rückgabetyp in Funktionen verwenden
 
 ### Move-Semantik
 * **Rvalue-Referenzen**
-		* MS2-1-L16 : *Rvalue-Referenzen* als Alias-Identifier und als Parameter in Funktionen verwenden
+	* MS2-1-L16 : *Rvalue-Referenzen* als Alias-Identifier und als Parameter in Funktionen verwenden
 * **Die „Rule of Five“**
-		* MS2-2-L18 : Überschreiben von Move-Konstruktor und Move-Zuweisungsoperator
-		* MS2-2-L19 : Sicheres Verschieben von Objekten mit Hilfe der Move-Semantik
+	* MS2-2-L18 : Überschreiben von Move-Konstruktor und Move-Zuweisungsoperator
+	* MS2-2-L19 : Sicheres Verschieben von Objekten mit Hilfe der Move-Semantik
 * **Performance-Vergleich „Copy“ vs. „Move“** 
-		* MS3-1 : Performance-Vergleich zwischen Copy- und Move-Semantik
+	* MS3-1 : Performance-Vergleich zwischen Copy- und Move-Semantik
 
 ---
 
