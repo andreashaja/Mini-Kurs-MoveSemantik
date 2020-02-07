@@ -1,3 +1,14 @@
+/* ---------------------------------------------------------------------
+ * The Fearless Engineer - Mini-Kurs "Move Semantik in C++"
+ * Copyright (C) 2020, Dr. Andreas Haja.  
+ *
+ * You should have received a copy of the MIT License
+ * along with this program. If not, see https://opensource.org/licenses/MIT.
+ *
+ * http://www.thefearlessengineer.com
+ * ----------------------------------------------------------------------
+ */
+
 #include <iostream>
 
 using namespace std;
@@ -5,18 +16,17 @@ using namespace std;
 class MyCopy
 {
 public:
-	// 1
+	// ressources managed by this class
     double *_myNumber;
     std::string _myName;
 	
-	// 2
     MyCopy()
     {
         cout << "Constructor\n";
         _myNumber = new double{0.0};
     }
 
-    // 3
+	// Rule of Three
 	~MyCopy()
     {
         cout << "Destructor\n";
@@ -37,7 +47,7 @@ public:
         return *this;
     }
 
-	// 4
+	// helper function to print heap address and value of managed ressourced
 	void printValueAndHandle()
     {
         cout << _myName << " heap address = " 
@@ -51,7 +61,7 @@ public:
 
 int main()
 {
-	// 5
+	// create MyCopy instances and set members
     MyCopy s1;
     s1._myName = "s1";
     *s1._myNumber = 42.0;
@@ -60,11 +70,11 @@ int main()
     s2._myName = "s2";
     *s2._myNumber = 23.0;
 
-	// 6
+	// print value and heap address of managed ressources
     s1.printValueAndHandle();
     s2.printValueAndHandle();
 
-	// 7
+	// use customized copy assignment and print value and heap address afterwards
     s2 = s1;
     s2.printValueAndHandle();
 

@@ -1,39 +1,53 @@
+/* ---------------------------------------------------------------------
+ * The Fearless Engineer - Mini-Kurs "Move Semantik in C++"
+ * Copyright (C) 2020, Dr. Andreas Haja.  
+ *
+ * You should have received a copy of the MIT License
+ * along with this program. If not, see https://opensource.org/licenses/MIT.
+ *
+ * http://www.thefearlessengineer.com
+ * ----------------------------------------------------------------------
+ */
+
 #include <iostream>
 
 using namespace std;
 
-//2a
+// create custom class that illustrates the difference between return-by-copy and return-by-reference
 class MyClass
 {
 public:
     int _val;
     MyClass(int val) { _val = val; }
-    ~MyClass() { cout << "~MyClass\n"; }
+    ~MyClass() { cout << "~MyClass (_val=" << _val << ")\n"; }
     MyClass returnCopy() { return *this; }
-    MyClass &returnReference() { return *this; }
+    MyClass &returnReference() { return *this; } // note the ampersand before the function identifier
 };
 
-// 1a
+// function that has an lvalue reference as its parameter
 void myFun1(int &param)
 {
-    param *= 2;
+    param *= 2; // directly modify the lvalue behind the reference
 }
 
 int main()
 {
-    // 1b
-    int m{10};
-    myFun1(m);
-    cout << "m = " << m << endl;
+    // create integer and pass it to function that modifies it using an lvalue reference
+    int i{0};
+    myFun1(i);
+    cout << "i = " << i << endl;
 
-    // 2b
-    MyClass mc(5);
-    cout << "mc._val (copy) = "
-         << mc.returnCopy()._val << endl;
+    // create instance of MyClass and use 'return-by-copy'
+    MyClass mc1(1);
+    cout << "mc1._val (copy) = "
+         << mc1.returnCopy()._val << endl;
 
-    // 2c
-    cout << "mc._val (reference) = "
-         << mc.returnReference()._val << endl;
+    // create instance of MyClass and use 'return-by-reference' (note the number of destructor calls!)
+    MyClass mc2(2);
+    cout << "mc2._val (reference) = "
+         << mc2.returnReference()._val << endl;
+
+    
 
     return 0;
 }

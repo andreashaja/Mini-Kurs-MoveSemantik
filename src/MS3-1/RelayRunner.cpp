@@ -1,3 +1,14 @@
+/* ---------------------------------------------------------------------
+ * The Fearless Engineer - Mini-Kurs "Move Semantik in C++"
+ * Copyright (C) 2020, Dr. Andreas Haja.  
+ *
+ * You should have received a copy of the MIT License
+ * along with this program. If not, see https://opensource.org/licenses/MIT.
+ *
+ * http://www.thefearlessengineer.com
+ * ----------------------------------------------------------------------
+ */
+
 #include <iostream>
 #include "RelayRunner.h"
 
